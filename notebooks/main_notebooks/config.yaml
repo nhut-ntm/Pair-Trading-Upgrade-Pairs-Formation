@@ -1,3 +1,9 @@
 split_ratio: 0.7
+start_date_phase_1: '2018-12-10'
+end_date_phase_1: '2020-01-23'
+start_date_phase_2: '2020-04-11'
+end_date_phase_2: '2021-11-15'
+start_date_phase_3: '2021-11-30'
+end_date_phase_3: '2023-08-31'
 train_period: ('2018-12-10', '2019-09-22')
 test_period: ('2019-09-23', '2020-01-23')
