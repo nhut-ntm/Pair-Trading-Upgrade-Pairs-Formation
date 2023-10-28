@@ -1,0 +1,24 @@
+,Stock A,Stock B,Gatev Pairs,EG Pairs,EG Pairs Swap,Johansen Pairs,Count
+0,adClose_DBC,adClose_DLG,,x,,x,2
+1,adClose_DBC,adClose_HHS,x,x,,,2
+2,adClose_DBC,adClose_HNG,x,x,,x,3
+3,adClose_DBC,adClose_IDI,,x,,x,2
+4,adClose_DBC,adClose_SBT,x,x,,x,3
+5,adClose_DBC,adClose_TNG,,x,,x,2
+6,adClose_DBC,adClose_TSC,,x,,,1
+7,adClose_DBC,adClose_TTF,,x,,x,2
+8,adClose_DBC,adClose_VNM,x,x,,x,3
+9,adClose_DLG,adClose_IDI,,,,x,1
+10,adClose_DLG,adClose_TNG,,,,x,1
+11,adClose_DLG,adClose_TTF,x,,,,1
+12,adClose_DLG,adClose_VNM,,,,x,1
+13,adClose_HHS,adClose_IDI,,,x,,1
+14,adClose_HHS,adClose_SBT,x,,,,1
+15,adClose_HHS,adClose_TTF,x,,,,1
+16,adClose_HNG,adClose_IDI,,,x,x,2
+17,adClose_HNG,adClose_VNM,x,,,,1
+18,adClose_IDI,adClose_SBT,,,,x,1
+19,adClose_IDI,adClose_TSC,,x,,,1
+20,adClose_IDI,adClose_TTF,x,,,,1
+21,adClose_IDI,adClose_VNM,,x,,x,2
+22,adClose_SBT,adClose_VNM,x,,,,1

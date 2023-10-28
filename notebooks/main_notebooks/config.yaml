@@ -1,9 +1,17 @@
-split_ratio: 0.7
+# tỉ lệ chia giống bài báo số 27. pairs trading ở thị trường canada (pairs formation là khoảng 66.67% còn lại là trading)
+split_ratio: 0.7 
+
 start_date_phase_1: '2018-12-10'
 end_date_phase_1: '2020-01-23'
 start_date_phase_2: '2020-04-11'
 end_date_phase_2: '2021-11-15'
 start_date_phase_3: '2021-11-30'
 end_date_phase_3: '2023-08-31'
+
 train_period: ('2018-12-10', '2019-09-22')
 test_period: ('2019-09-23', '2020-01-23')
+
+paths_df_finance_processed: ( "..//..//..//..//..//data//processed//finance//df_finance_processed_first_period_18102023.csv", "..//..//..//..//..//data//processed//finance//df_finance_processed_second_period_18102023.csv", "..//..//..//..//..//data//processed//finance//df_finance_processed_third_period_18102023.csv")
+paths_df_tech_processed: ( "..//..//..//..//..//data//processed//tech//df_tech_processed_first_period_18102023.csv", "..//..//..//..//..//data//processed//tech//df_tech_processed_second_period_18102023.csv", "..//..//..//..//..//data//processed//tech//df_tech_processed_third_period_18102023.csv")
+paths_df_consumer_good_processed: ( "..//..//..//..//..//data//processed//consumer_good//df_consumer_good_processed_first_period_18102023.csv", "..//..//..//..//..//data//processed//consumer_good//df_consumer_good_processed_second_period_18102023.csv", "..//..//..//..//..//data//processed//consumer_good//df_consumer_good_processed_third_period_18102023.csv")
+

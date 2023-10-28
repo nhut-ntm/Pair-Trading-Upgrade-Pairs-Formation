@@ -1,0 +1,19 @@
+,Stock A,Stock B,Gatev Pairs,EG Pairs,EG Pairs Swap,Johansen Pairs,Count
+0,adClose_HAG,adClose_ITA,,,,x,1
+1,adClose_HAG,adClose_SHB,x,,,,1
+2,adClose_HAG,adClose_VND,,,x,x,2
+3,adClose_HQC,adClose_MBB,,,,x,1
+4,adClose_HQC,adClose_SSI,x,x,,x,3
+5,adClose_HQC,adClose_STB,x,,,,1
+6,adClose_HQC,adClose_VND,x,x,x,x,4
+7,adClose_HQC,adClose_VPB,x,,,x,2
+8,adClose_ITA,adClose_SHB,,,,x,1
+9,adClose_ITA,adClose_VND,,,,x,1
+10,adClose_ITA,adClose_VPB,,,,x,1
+11,adClose_SHB,adClose_STB,x,,x,,2
+12,adClose_SHB,adClose_VND,,,x,x,2
+13,adClose_SSI,adClose_STB,x,x,x,x,4
+14,adClose_SSI,adClose_VND,x,x,x,x,4
+15,adClose_SSI,adClose_VPB,x,,,,1
+16,adClose_STB,adClose_VND,,x,x,x,3
+17,adClose_VND,adClose_VPB,x,,,,1

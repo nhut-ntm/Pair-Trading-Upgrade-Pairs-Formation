@@ -7,6 +7,8 @@ def find_integration_order(
 ) -> pd.DataFrame:
     
     results = []
+    
+    df = df.dropna()
 
     # Perform ADF Test over and over again until the time series is stationary 
     # The order of integration is the number of times ADF needs to be performed to make the time series stationary

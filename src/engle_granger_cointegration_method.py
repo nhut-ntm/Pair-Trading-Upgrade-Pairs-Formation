@@ -11,6 +11,7 @@ def find_cointegrated_pairs(
     
     # Find the cointegrated pairs 
     n = df.shape[1]
+
     
     # Establish a zero-containing matrix 
     score_matrix = np.zeros((n, n))
@@ -57,6 +58,7 @@ def find_cointegrated_pairs_swap(
     df: pd.DataFrame,
     visualize: bool = True
 ) -> tuple:
+    
     
     # Find the cointegrated pairs 
     n = df.shape[1]

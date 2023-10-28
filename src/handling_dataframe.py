@@ -117,7 +117,7 @@ def pairs_formation_result_summary(
         combinations_list.append(combo)
     
     # Create an empty DataFrame with the specified columns
-    columns = ['Stock A', 'Stock B', 'Gatev Pairs', 'EG Pairs', 'EG Pairs Swap', 'Johansen Pairs']
+    columns = ['Stock A', 'Stock B', 'Gatev Pairs', 'EG Pairs', 'EG Pairs Swap', 'Johansen Pairs', 'Count']
     df = pd.DataFrame(columns=columns)
     
     # Create an empty list of dictionaries
@@ -126,51 +126,68 @@ def pairs_formation_result_summary(
     # Iterate through combinations and check if they appear in the given lists
     for combo in combinations_list:
         stock_a, stock_b = combo
-        row = {'Stock A': stock_a, 'Stock B': stock_b}
+        row = {'Stock A': stock_a, 'Stock B': stock_b, 'Count': 0}
 
-        count_x = 0  # Initialize the count of 'x' marks for this combination
+        if gatev_pairs_list:
+            for pair in gatev_pairs_list:
+                if [stock_a, stock_b] == pair or [stock_b, stock_a] == pair:
+                    row['Gatev Pairs'] = 'x'
+                    row['Count'] += 1
 
-        for pair in gatev_pairs_list:
-            if [stock_a, stock_b] == pair or [stock_b, stock_a] == pair:
-                row['Gatev Pairs'] = 'x'
-                count_x += 1
+        if eg_pairs_list:
+            for pair in eg_pairs_list:
+                if [stock_a, stock_b] == pair or [stock_b, stock_a] == pair:
+                    row['EG Pairs'] = 'x'
+                    row['Count'] += 1
 
-        for pair in eg_pairs_list:
-            if [stock_a, stock_b] == pair or [stock_b, stock_a] == pair:
-                row['EG Pairs'] = 'x'
-                count_x += 1
+        if eg_pairs_swap_list:
+            for pair in eg_pairs_swap_list:
+                if [stock_a, stock_b] == pair or [stock_b, stock_a] == pair:
+                    row['EG Pairs Swap'] = 'x'
+                    row['Count'] += 1
 
-        for pair in eg_pairs_swap_list:
-            if [stock_a, stock_b] == pair or [stock_b, stock_a] == pair:
-                row['EG Pairs Swap'] = 'x'
-                count_x += 1
+        if johansen_pairs_list:
+            for pair in johansen_pairs_list:
+                if [stock_a, stock_b] == pair or [stock_b, stock_a] == pair:
+                    row['Johansen Pairs'] = 'x'
+                    row['Count'] += 1
 
-        for pair in johansen_pairs_list:
-            if [stock_a, stock_b] == pair or [stock_b, stock_a] == pair:
-                row['Johansen Pairs'] = 'x'
-                count_x += 1
-
-        row['Count'] = count_x  # Add the count of 'x' marks for this combination
         data.append(row)
 
     # Create the DataFrame from the list of dictionaries
     df = pd.DataFrame(data)
 
-    # Create an additional row at the end that counts the number of 'x' marks
-    count_row = {'Stock A': 'Count', 'Stock B': ''}
-    for col in df.columns[2:]:
-        count_row[col] = (df[col] == 'x').sum()
-
-    df = df.append(count_row, ignore_index=True)
-
-    # Reorder the columns to have 'Count' as the last column
-    df = df[['Stock A', 'Stock B', 'Gatev Pairs', 'EG Pairs', 'EG Pairs Swap', 'Johansen Pairs', 'Count']]
-
     # Fill NaN values with an empty string for better representation
     df = df.fillna('')   
     
+    count_element_in_list = [
+        len(gatev_pairs_list), 
+        len(eg_pairs_list), 
+        len(eg_pairs_swap_list), 
+        len(johansen_pairs_list)]
+    
+    if 0 not in count_element_in_list: 
+        # Define the desired column order as a list
+        desired_column_order = ['Stock A', 'Stock B', 'Gatev Pairs', 'EG Pairs', 'EG Pairs Swap', 'Johansen Pairs', 'Count']
+    
+         # Reorder the DataFrame based on the desired column order
+        df = df[desired_column_order]
+    else:
+        # Define the name of the column you want to move to the last position
+        column_name_to_move = 'Count'
+
+        # Check if the column exists in the DataFrame
+        if column_name_to_move in df.columns:
+            # Get the list of column names, excluding the one you want to move
+            column_order = [col for col in df.columns if col != column_name_to_move]
+            # Add the column at the last position
+            column_order.append(column_name_to_move)
+            # Reorder the DataFrame based on the new column order
+            df = df[column_order]
+
     # Select pairs that satisfy more than one of the tests
-    df_pairs = df[df['Count']>0]
+    df_pairs = df[df['Count'] > 0]
+    
     df_pairs = df_pairs.reset_index(drop=True)
     
     return df_pairs
