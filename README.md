@@ -37,13 +37,13 @@
         - Các thông số còn lại là các đường dẫn đến file data 
             - CÓ THỂ BỎ QUA 
 
-#### **III. Results**
+### **III. Results**
 1. Folder `results/pairs_formation` chứa kết quả chọn cặp 
     - Folder này gồm 3 folder con tương ứng với 3 ngành
     - Mỗi folder con chứa 3 file `csv` tương ứng với kết quả chọn cặp cho 3 khung thời gian 
     - Cú pháp mỗi file kết quả bao gồm `{tên_ngành}_pairs_formation_{khung_thời_gian}_period_{ngày_sinh_ra_kết_qủa}.csv`
 
-#### **IV. Source code**
+### **IV. Source code**
 1. BỎ QUA folder `src/__pycache__`
 2. Các file source code tổ chức như sau 
     - `config_snippets.py`: chứa hàm đọc file config.yaml
