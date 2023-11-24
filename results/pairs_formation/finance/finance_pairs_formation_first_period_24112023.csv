@@ -1,0 +1,25 @@
+,Stock A,Stock B,Gatev Pairs,EG Pairs,EG Pairs Swap,Johansen Pairs,Count
+0,adClose_DXG,adClose_HAG,,,,x,1
+1,adClose_DXG,adClose_HQC,x,,,,1
+2,adClose_DXG,adClose_SSI,,x,x,,2
+3,adClose_DXG,adClose_VPB,x,,,,1
+4,adClose_HAG,adClose_HQC,,x,,x,2
+5,adClose_HAG,adClose_ITA,,,,x,1
+6,adClose_HAG,adClose_SHB,,x,x,x,3
+7,adClose_HAG,adClose_SSI,,,,x,1
+8,adClose_HAG,adClose_STB,,,,x,1
+9,adClose_HAG,adClose_VND,,,,x,1
+10,adClose_HAG,adClose_VPB,,x,,x,2
+11,adClose_HQC,adClose_ITA,,,x,x,2
+12,adClose_HQC,adClose_SHB,x,,,,1
+13,adClose_HQC,adClose_SSI,x,,,,1
+14,adClose_HQC,adClose_VND,x,,,,1
+15,adClose_HQC,adClose_VPB,,x,x,x,3
+16,adClose_ITA,adClose_SHB,,,,x,1
+17,adClose_ITA,adClose_VPB,,x,x,x,3
+18,adClose_MBB,adClose_SHB,x,,,,1
+19,adClose_MBB,adClose_SSI,x,,,,1
+20,adClose_SHB,adClose_SSI,x,,,,1
+21,adClose_SHB,adClose_VND,x,,,,1
+22,adClose_SSI,adClose_VND,x,x,x,x,4
+23,adClose_STB,adClose_VND,,,,x,1

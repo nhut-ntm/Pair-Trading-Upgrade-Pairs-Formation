@@ -1,0 +1,11 @@
+,Stock A,Stock B,Gatev Pairs,Johansen Pairs,Count
+0,adClose_DBC,adClose_SBT,x,,1
+1,adClose_DLG,adClose_TSC,x,,1
+2,adClose_HHS,adClose_IDI,x,,1
+3,adClose_HHS,adClose_TTF,x,,1
+4,adClose_HHS,adClose_VNM,x,,1
+5,adClose_IDI,adClose_TSC,x,,1
+6,adClose_IDI,adClose_TTF,x,,1
+7,adClose_IDI,adClose_VNM,x,,1
+8,adClose_TSC,adClose_VNM,x,x,2
+9,adClose_TTF,adClose_VNM,x,x,2
