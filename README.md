@@ -7,7 +7,10 @@
 - Các kỹ thuật sử dụng bao gồm
   - Tiền xử lý dữ liệu
   - Manipulate dữ liệu
-  - Các kỹ thuật thống kê: Kiểm định nghiệm đơn vị; Kiểm định đồng liên kết 
+  - Các kỹ thuật thống kê: Kiểm định nghiệm đơn vị; Kiểm định đồng liên kết
+ 
+## **TO-DO**
+- Bổ sung documentation mô tả phương pháp 
 
 ## **Tổ chức của REPO**
 
