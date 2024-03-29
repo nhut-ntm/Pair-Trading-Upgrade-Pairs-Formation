@@ -4,6 +4,10 @@
 - Project này sử dụng dữ liệu giá cổ phiếu của các công ty niêm yết trên các sàn chứng khoán tại Việt Nam, phân tích, và xác định các cặp cổ phiếu có tính chất đồng liên kết, nhằm phục vụ cho chiến lược giao dịch theo cặp.
 - Tác giả: Nguyễn Trần Minh Nhựt (đồng thời chủ sở hữu của repo này dưới tên gọi nhut-ntm)
 - Email: nhutntmuel@gmail.com
+- Các kỹ thuật sử dụng bao gồm
+  - Tiền xử lý dữ liệu
+  - Manipulate dữ liệu
+  - Các kỹ thuật thống kê: kiểm định nghiệm đơn vị, kiểm định đồng liên kết 
 
 ## **Tổ chức của REPO**
 
